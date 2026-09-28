@@ -10,16 +10,15 @@ You can complete this task on the worksheet pdf if you prefer.
 
 |     Command                 |     Explanation    |
 |-----------------------------|--------------------|
-|     pwd                     | shows the current location of the terminal |
-|     ls                      | |
-|     cd directory_name       | |
-|     cd ..                   | |
-|     cd -                    | |
-|     mkdir directory_name    | |
-|     touch filename          | |
-|     git status              | |
-|     git add -A              | |
-|     git commit -m ""        | |
-|     git push                | |
-|     git pull                | |
-
+|     pwd                     | Shows the current location of the terminal |
+|     ls                      | Lists any child dirs/files at the current dir |
+|     cd directory_name       | Change dir to child dir called directory_name |
+|     cd ..                   | Change dir by going back one directory |
+|     cd -                    | Reverts current dir to the previous working dir |
+|     mkdir directory_name    | Make a new directory called directory_name |
+|     touch filename          | Make a new file called filename |
+|     git status              | Tracks files that have been created or modified in a repo |
+|     git add -A              | Prepares any changes for the next git commit |
+|     git commit -m ""        | Creates a git commit with an explicit commit message |
+|     git push                | Pushes the commit to the repo origin |
+|     git pull                | Integrates any changes from a repo into a local branch |

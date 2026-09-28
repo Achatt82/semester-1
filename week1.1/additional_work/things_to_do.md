@@ -18,5 +18,5 @@ While everyone is catching up to the same level with Python, you're welcome to w
 - maybe you've got a mod or a game you develop, or you're interested in spending some time learning a different language? 
 - If you're **completely confident** that you've got the skills and knowledge from this week to do the portfolio task, you can use the module time to work on your own project. 
 - What we do ask, is that in our programming sessions you work on programming.
-
+n 
 Feel free to show your lecturer what you're up to- we're always interested to see what people are developing in their own time :)
