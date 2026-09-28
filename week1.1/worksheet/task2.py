@@ -4,9 +4,6 @@ By submitting this code you are declaring that all work in this file, other than
 Name: Alex Chatterton
 """
 
-from calendar import month_abbr
-
-
 name = input("What is your name? ")
 print(f"Welcome to LeedsBank's savings calculator {name}!")
 
