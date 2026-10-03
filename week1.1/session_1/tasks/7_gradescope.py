@@ -1,11 +1,9 @@
 
 def InputValue():
-    while True:
-        try:
-            val = float(input("Enter Value: "))
-            break
-        except ValueError:
-            print("Invalid input")
+    try:
+        val = float(input("Enter Value: "))
+    except ValueError:
+        print("That is not a number")
 
     return val
 
