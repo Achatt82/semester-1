@@ -4,9 +4,24 @@
 
 # Ask a user to enter two numbers (one per input)
 
+def InputValue():
+    try:
+        val = float(input("Enter Value: "))
+    except ValueError:
+        print("That is not a number")
+
+    return val
+
+val1 = InputValue()
+val2 = InputValue()
+
 # multiply those numbers together
 
+res = val1 * val2
+
 # print out the result
+
+print(f"Result {res}")
 
 # There is an extra point available for validating that they entered numbers!
 # Add to your code so that if they entered something other than an integer it prints

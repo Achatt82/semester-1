@@ -4,7 +4,6 @@
 
 My name is **Alex Chatterton** and I am a first year student of computer science at the University of Leeds. My major is in High Performance Graphics and Game Engineering and I mainly work with languages like `C++` and graphics APIs.
 
-
 ## Interests
 
 I also have many hobbies extending outside of the scope of my degree, such as:
