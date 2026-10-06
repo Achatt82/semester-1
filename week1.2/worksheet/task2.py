@@ -7,7 +7,7 @@ values = read_numbers()
 
 # Edge cases
 if len(values) == 0:
-    sys.exit("Error: No numbers provided.\n")
+    sys.exit("Error: no numbers provided")
 
 minimum = min(values)
 maximum = max(values)
@@ -17,7 +17,7 @@ values = sorted(values)
 middle = len(values) // 2
 
 if (len(values) % 2 == 0 ):
-    median = (values[middle] + values[middle + 1]) / 2
+    median = (values[middle - 1] + values[middle]) / 2
 else:
     median = values[middle]
 
