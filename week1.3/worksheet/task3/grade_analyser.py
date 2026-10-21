@@ -1,21 +1,58 @@
 # Worksheet 1.3: Task 3
 
-# Your code for the overall grade classification
+import csv
 
-# ask for filename of the student file
+DEBUG = False
+if DEBUG:
+    import os
 
-# open the file
+    # Hardcoded cwd for testing purposes
+    os.chdir(r"E:\Dev\Python\semester-1\week1.3\worksheet\task3")
 
-# read in the data, and for each student calculate their average grade and classification
+filename = input("Enter filename: ")
 
+def CalculateGPA(grades):
+    total, fq = 0, 0
+    for grade in grades:
+        total += grade
+        fq += 1
 
+    return total / fq
 
-# write out this calculated data in the format without a header:
-#      student_id,average_grade,classification - replace this with actual value
-#      The average grade should be given to 2 decimal places
-#      this can be achieved by using the following in an fstring: {variable_name:.2f}
+def CalculateDegree(gpa):
+    degree = "0"
+    match gpa:
+        case _ if gpa >= 70:
+            degree = "1"
+        case _ if gpa >= 60:
+            degree = "2:1"
+        case _ if gpa >= 50:
+            degree = "2:2"
+        case _ if gpa >= 40:
+            degree = "3"
+        case _:
+            degree = "F"
 
+    return degree
 
-# write this data out to a file named input_file_name + _out.csv - e.g. the input file name 'student_data.csv' -> 'student_data.csv_out.csv'
+with open(filename, "r", newline="") as file:
 
-# You can compare your output files with the 4 example files in example_outfiles folder
+    out_filename = filename + "_out.csv"
+    filename += ".csv"
+
+    rdbuf = csv.reader(file)
+    next(rdbuf)
+
+    with open (out_filename, "w", newline="") as outfile:
+        writer = csv.writer(outfile)
+
+        for row in rdbuf:
+            student_id = row[0]
+            grades = row[1:]
+
+            grades = [int(grade) for grade in grades if grade != ""]
+            gpa = CalculateGPA(grades)
+            degree = CalculateDegree(gpa)
+            gpa = f"{gpa:.2f}"
+
+            writer.writerow([student_id, gpa, degree])
