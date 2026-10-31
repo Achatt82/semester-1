@@ -1,5 +1,7 @@
 # Worksheet 1.5: Rectangle Class
 
+from cmath import rect
+
 class Rectangle:
     """
     A rectangle, with a width and a height.
@@ -8,10 +10,37 @@ class Rectangle:
         """
         Creates a Rectangle, given values for width and height.
         """
-        # Add code here to check type and value of provided width & height,
-        # raising appropriate exceptions if necessary (see README.md)
+
+        if not isinstance(width, int) or not isinstance(height, int):
+            raise TypeError("Both parameters must be integers")
+
+        if width <= 0 or height <= 0:
+            raise ValueError("Both parameters must be greater than 0")
+
         self.width = width
         self.height = height
 
-    # Implement methods is_square(), area() & perimeter() here
-    # (See README.md for details of what they should do)
+    def is_square(self):
+        """
+        Checks if the rectangles width is equal to its height.
+        If they are equal, the rectangle is square and returns True. Otherwise,
+        it returns false.
+        """
+
+        return self.width == self.height
+
+    def area(self):
+        """
+        Calculates and returns the area of the rectangle by multiplying its width
+        by its height.
+        """
+
+        return self.width * self.height
+
+    def perimeter(self):
+        """
+        Calculates and returns the perimeter of the rectangle by adding
+        its width and height togetyher and multiplying by 2.
+        """
+
+        return (self.width + self.height) * 2
