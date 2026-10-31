@@ -27,7 +27,7 @@ def currency_converter(amount, from_currency, to_currency):
 
     if (amount < 0):
         print("Cannot have negative values for currency.")
-        return None
+        return 0.0
     
     if (from_currency not in conversion_rate):
         print(f"{from_currency} is either an invalid or unsupported currency.")
@@ -47,7 +47,7 @@ def currency_converter(amount, from_currency, to_currency):
     value = float(amount) * conversion_rate[from_currency][to_currency]
 
     # Format to value to 2dp 
-    return f"{value:.2f}"
+    return float(f"{value:.2f}")
 
 # Submit only this file currency_converter.py with the completed function.
 
